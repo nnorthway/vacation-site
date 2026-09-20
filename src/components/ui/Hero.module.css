@@ -1,0 +1,26 @@
+.hero {
+  width: 100%;
+  min-height: 50vh;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(0,0,0,.4), rgba(0,0,0,.4) 40%, rgba(0,0,0,.01))
+}
+.hero img {
+  display: none;
+}
+.hero_content {
+  color: #fff;
+  z-index: 2;
+}
