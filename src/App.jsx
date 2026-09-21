@@ -1,27 +1,29 @@
 import { RouterProvider, createBrowserRouter } from "react-router"
 
-import "normalize.css"
-
 import {DATA} from "./components/data/Data.js"
+import Root from "./components/pages/Root.jsx"
 import HomePage from "./components/pages/HomePage.jsx"
+import CalendarPage from "./components/pages/CalendarPage.jsx"
+import DayPage from "./components/pages/DayPage.jsx"
 
-/*
-need: 
-- {data}: the schedule, in json format ✅ shape figured out
-- <header>: menu container on all pages that contains <nav>
-✅ <hero>: layout/ui component on every page
-✅ <homePage>: layout page that contains a hero, intro, & summary of days with links. 
-✅ <calendarOverview>: container that wraps calendar items for each day
-✅ <calendarItem>: shows where we're coming from & going to
-- <calendarPage>: layout page that contains a hero & overview of daily schedule
-- <day>: layout page that contains a given day's detailed schedule (as <schedule>) and links to previous/following day
-- <schedule>: layout/ui component that presents a list of activities & times
-*/
+const loader = () => {
+  document.body.scrollTo(0,0)
+}
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <HomePage />
+    element: <Root />,
+    children: [
+      {index: true, element: <HomePage />, loader: loader},
+      {
+        path: "calendar", 
+        children: [
+          {index: true, element: <CalendarPage />},
+          {path: ":id", element: <DayPage />}
+        ]
+      },
+    ]
   }
 ])
 

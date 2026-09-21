@@ -1,0 +1,18 @@
+.day_navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em 0;
+}
+.day_navigation .item {
+  display: flex;
+  flex-direction: column;
+}
+.day_navigation .title {
+  display: block;
+  font-size: 1.25em;
+}
+.day_navigation .item:last-of-type {
+  align-items: flex-end;
+}

@@ -1,7 +1,9 @@
 .hero {
-  width: 100%;
-  min-height: 50vh;
+  width: calc(100% - 4em);
+  padding: 2em;
+  min-height: calc(50vh - 4em);
   position: relative;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -23,4 +25,8 @@
 .hero_content {
   color: #fff;
   z-index: 2;
+  max-width: 980px;
+}
+.hero_content * {
+  text-align: center;
 }

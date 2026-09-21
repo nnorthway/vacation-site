@@ -1,3 +1,4 @@
+import Header from "../Header.jsx";
 import Hero from "../ui/Hero.jsx"
 import CalendarOverview from "../CalendarOverview.jsx"
 
@@ -6,12 +7,12 @@ export default function HomePage() {
   return (
     <>
       <Hero image={image} alt="A cruise ship at sea">
-        <h1>Home Page</h1>
-        <p>This is the homepage</p>
+        <h1>Abel & Nate Take A Cruise</h1>
+        <p>NYC to Halifax and back!<br />10/3/26 - 10/10/26</p>
       </Hero>
       <div className="body-content">
         <h2>Welcome to The Ship</h2>
-        <p>
+        <p style={{margin: 0}}>
           This website serves as your guide to our trip. Use it as a reference when you need it. Here are some usage tips: 
         </p>
         <ul>

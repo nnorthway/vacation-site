@@ -1,10 +1,8 @@
-.calendar_item {
-  display: flex;
-  flex-direction: row;
-}
-.date {
-
-}
 .content {
-  
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+.content span {
+  display: block;
 }
